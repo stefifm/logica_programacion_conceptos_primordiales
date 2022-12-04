@@ -1,0 +1,40 @@
+<meta charset="UTF-8" />
+
+<h1>PROGRAMA JUEGO DE ADIVINANZAS</h1>
+<br>
+
+<script>
+
+  function saltarLinea() {
+    document.write('<br><br><br>');
+  }
+
+  function imprimir(frase) {
+    document.write(frase);
+    saltarLinea();
+  }
+
+  function sorteo(n) {
+    numero = Math.round(Math.random() * n);
+    return numero
+  }
+
+  var numeroPensado = sorteo(10);
+  var numeroLanzado = parseInt(prompt('Ingrese un numero entre 0 y 10'));
+
+  if (numeroPensado == numeroLanzado) {
+
+    imprimir('Usted acerto');
+
+  } else {
+    if (numeroLanzado > numeroPensado) {
+
+      imprimir('Usted no acerto. El numero que usted ingreso era mayor al pensado');
+
+    } else {
+      imprimir('Usted no acerto. El numero que usted ingreso era menor al pensado');
+
+    }
+  }
+
+</script>

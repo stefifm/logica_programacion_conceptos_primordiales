@@ -1,0 +1,34 @@
+<meta charset="UTF-8" />
+
+<h1>PROGRAMA PROMEDIO DE EDADES DE UNA FAMILIA</h1>
+
+<script>
+
+  function saltarLinea() {
+    document.write('<br><br><br>');
+  }
+
+  function imprimir(frase) {
+    document.write(frase);
+    saltarLinea();
+  }
+
+  var cantidadFamilia = parseInt(prompt('Ingrese la cantidad de integrantes de la familia'));
+  var contador = 1;
+  var totalEdades = 0;
+
+
+  while (contador <= cantidadFamilia) {
+
+    edad = parseInt(prompt("Ingrese la edad de sus familiares"));
+    totalEdades = totalEdades + edad;
+    contador++
+
+  }
+
+  var promedioEdades = totalEdades / contador;
+
+  imprimir('El promedio de edades de la familia es de: ' + promedioEdades);
+
+
+</script>
